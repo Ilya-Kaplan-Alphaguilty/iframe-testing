@@ -29,6 +29,7 @@ const IframePage = () => {
           src={`https://stage.alphaguilty.io/iframe/${quest}`}
           width={searchParams.get("width")}
           height={searchParams.get("height")}
+          sandbox="allow-popup"
           id="alphaguilty-iframe"
         />
         <p>
