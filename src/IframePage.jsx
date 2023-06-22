@@ -1,6 +1,4 @@
-import { useParams, useSearchParams } from "react-router-dom";
 import logo from "./logo.svg";
-import { useEffect } from "react";
 
 const IframePage = () => {
   return (
