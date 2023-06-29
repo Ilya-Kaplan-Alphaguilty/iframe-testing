@@ -43,7 +43,9 @@
         }
       };
 
+      let timeout = null;
       const openIframe = () => {
+        clearTimeout(timeout);
         iframeContainer.querySelector("#alphaguilty-iframe").classList.remove("closed");
         iframeContainer.classList.remove("closing");
         iframeContainer.classList.add("open");
@@ -53,7 +55,7 @@
       const closeIframe = () => {
         iframeContainer.classList.remove("open");
         iframeContainer.classList.add("closing");
-        setTimeout(() => {
+        timeout = setTimeout(() => {
           iframeContainer.querySelector("#alphaguilty-iframe").classList.add("closed");
         }, closeAnimationTime);
       };
